@@ -24,7 +24,6 @@
   animation: rotate-center 45s linear infinite;
 }
 
-/* :root,
-[data-theme] {
-  background-color: black !important;
+/* .active {
+  font-weight: 700;
 } */

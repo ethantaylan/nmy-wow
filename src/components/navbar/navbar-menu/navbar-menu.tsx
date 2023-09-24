@@ -1,19 +1,17 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-export interface MobileMenusItems {
+export interface MenusItems {
   label: string;
   to: string;
 }
 
-export interface MobileNavbarMenuProps {
-  items: MobileMenusItems[];
+export interface NavbarMenuProps {
+  items: MenusItems[];
   matches: boolean;
 }
 
-export const MobileNavbarMenu: React.FC<MobileNavbarMenuProps> = ({
-  items,
-  matches,
-}) => {
+export const NavbarMenu: React.FC<NavbarMenuProps> = ({ items, matches }) => {
   return (
     <ul
       tabIndex={0}
@@ -21,10 +19,10 @@ export const MobileNavbarMenu: React.FC<MobileNavbarMenuProps> = ({
         matches && "menu menu-horizontal px-1"
       } menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-200 rounded-box`}
     >
-      {items.map((items: MobileMenusItems) => (
+      {items.map((items: MenusItems) => (
         <>
           <li key={items.label}>
-            <a>{items.to}</a>
+            <NavLink to={items.to}>{items.label}</NavLink>
           </li>
         </>
       ))}
