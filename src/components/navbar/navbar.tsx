@@ -1,6 +1,7 @@
 import React from "react";
 import { MenusItems, NavbarMenu } from "./navbar-menu/navbar-menu";
 import { useMediaQuery } from "../../hooks/use-media-query";
+import Logo from "../../assets/logo.png";
 
 export const Navbar: React.FC = () => {
   const menus: MenusItems[] = [
@@ -13,35 +14,17 @@ export const Navbar: React.FC = () => {
   const matches = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="navbar bg-base-200">
+    <div className="navbar h-20 border-b border-b-zinc-800 text-white bg-black">
       <div className="navbar-start">
-        <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </label>
-          <NavbarMenu items={menus} matches={matches} />
-        </div>
+        <a className="btn btn-ghost normal-case text-xl">
+          <img width={40} src={Logo} alt="NMY logo" />
+        </a>
+      </div>
 
-        <a className="btn btn-ghost normal-case text-xl">NMY</a>
-      </div>
-      <div className="navbar-center hidden lg:flex">
-        <NavbarMenu items={menus} matches={matches} />
-      </div>
+      <NavbarMenu items={menus} matches={matches} />
       <div className="navbar-end">
-        <a className="btn">
+        <div className="h-1 bg-white" />
+        <a className="btn btn-ghost">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

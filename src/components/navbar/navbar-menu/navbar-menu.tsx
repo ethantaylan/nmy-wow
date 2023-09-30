@@ -13,19 +13,19 @@ export interface NavbarMenuProps {
 
 export const NavbarMenu: React.FC<NavbarMenuProps> = ({ items, matches }) => {
   return (
-    <ul
-      tabIndex={0}
-      className={`${
-        matches && "menu menu-horizontal px-1"
-      } menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-200 rounded-box`}
-    >
-      {items.map((items: MenusItems) => (
-        <>
+    <div className="navbar-center hidden lg:flex">
+      <ul
+        tabIndex={0}
+        className={`${
+          matches && "menu menu-horizontal px-1"
+        } menu space-x-3 spacin dropdown-content tracking-wider z-[1] p-2 shadow uppercase rounded-box`}
+      >
+        {items.map((items: MenusItems) => (
           <li key={items.label}>
             <NavLink to={items.to}>{items.label}</NavLink>
           </li>
-        </>
-      ))}
-    </ul>
+        ))}
+      </ul>
+    </div>
   );
 };
