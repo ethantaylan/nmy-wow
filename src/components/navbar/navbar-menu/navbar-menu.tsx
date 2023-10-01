@@ -18,7 +18,7 @@ export const NavbarMenu: React.FC<NavbarMenuProps> = ({ items, matches }) => {
         tabIndex={0}
         className={`${
           matches && "menu menu-horizontal px-1"
-        } menu space-x-3 spacin dropdown-content tracking-wider z-[1] p-2 shadow uppercase rounded-box`}
+        } menu space-x-3 spacin dropdown-content tracking-wider z-[1] p-2 uppercase rounded-box`}
       >
         {items.map((items: MenusItems) => (
           <li key={items.label}>

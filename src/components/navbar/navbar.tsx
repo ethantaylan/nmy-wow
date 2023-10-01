@@ -14,7 +14,7 @@ export const Navbar: React.FC = () => {
   const matches = useMediaQuery("(min-width: 768px)");
 
   return (
-    <div className="navbar h-20 border-b border-b-zinc-800 text-white bg-black">
+    <div className="navbar h-20  border-b border-b-zinc-800 text-white">
       <div className="navbar-start">
         <a className="btn btn-ghost normal-case text-xl">
           <img width={40} src={Logo} alt="NMY logo" />
