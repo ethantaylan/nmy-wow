@@ -5,5 +5,5 @@ export interface SectionTitleProps {
 }
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ title }) => {
-  return <h3 className="text-3xl my-5 text-white">{title}</h3>;
+  return <h3 className="text-3xl mt-5 mb-2 text-white">{title}</h3>;
 };
