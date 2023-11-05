@@ -11,13 +11,13 @@ const initialState: UserState = {
   isAdmin: false,
 };
 
-export const userInformations = createSlice({
-  name: "userInformations",
+export const UserSlice = createSlice({
+  name: "userSlice",
   initialState,
   reducers: {
     setUserInformations: (
       state,
-      actions: PayloadAction<{ user: User | null; isAdmin: boolean }>
+      actions: PayloadAction<UserState>
     ) => {
       state.user = actions.payload.user;
       state.isAdmin = actions.payload.isAdmin;
@@ -25,6 +25,6 @@ export const userInformations = createSlice({
   },
 });
 
-export const { setUserInformations } = userInformations.actions;
+export const { setUserInformations } = UserSlice.actions;
 
-export default userInformations.reducer;
+export default UserSlice.reducer;

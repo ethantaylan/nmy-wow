@@ -3,8 +3,8 @@ import { Banner } from "../../components/banner/banner";
 import { News } from "../../components/news/news";
 import { supabase } from "../../supabase";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../store";
-import { setUserInformations } from "../../set-user-informations";
+import { useAppDispatch } from "../../redux/store";
+import { setUserInformations } from "../../redux/user";
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
