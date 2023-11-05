@@ -27,7 +27,9 @@ export const Roster: React.FC = () => {
 
   React.useEffect(() => {
     setRosterPlayers(players.filter((player) => player.isInRoster));
-  }, [getPlayersFetch.response]);
+
+  
+  }, [players]);
 
   const specColors: { [key: string]: string } = {
     "Demon Hunter": "text-purple-600",
